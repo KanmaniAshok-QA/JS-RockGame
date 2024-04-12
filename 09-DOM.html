@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button>Hello</button>
+  <button class = "js-button">Good Job!</button>
+  <script>
+    console.log(document.querySelector('button').innerHTML);
+  //  document.querySelector('button').innerHTML = 'Changed';
+
+  //if two button , above code returns only first instace, so we add attribute to button called class attr
+
+ // console.log(document.querySelector('.js-button').innerHTML)
+
+ const res = document.querySelector('.js-button').innerHTML
+
+ const reshtml = document.querySelector('.js-button')
+
+ console.log(res, reshtml)
+
+  </script> 
+</body>
+</html>

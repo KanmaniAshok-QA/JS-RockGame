@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+  <body>
+    <p>Youtube Subscribe Button</p>
+    <button onclick="
+    subscribe()
+    "class="js-subscribe">Subscribe</button>
+
+    <p class="js-amazon-title">Amazon Shipping Calculator</p>
+    <p class="js-withshipping">Orders under $40 = +$10 shipping</p>
+    <p class="js-withoutshipping">Orders over $40 = FREE shipping</p>
+
+    <!--we want to calculate even when user presses enter button instaead of button click
+    so we use a event listener called onKeyDown
+    In JS onclick onkeydown are called event listeners which calls js code to run
+
+    <input type="text" placeholder="Cost of order" class="js-cost"/ onkeyDown="
+    console.log(event) // here event is an object if you run this code it will give you list of properties of event object
+    console.log(event.key) // this will return the key value which we pressed, eg if we type 25 in input box it will console 2 and 5 
+    ">
+    -->
+
+    <input type="text" placeholder="Cost of order" class="js-cost"/ onkeydown="
+    handleCostKeyDown(event)
+    ">
+
+    <button class = "js-calculate" onclick="
+    calculateTotal()
+    ">Calculate</button>
+
+    <p class="js-cost-total"></p>
+    <script>
+      function subscribe()
+      {
+        const subscribe = document.querySelector('.js-subscribe');
+        if(subscribe.innerHTML === 'Subscribe'){
+          document.querySelector('.js-subscribe').innerHTML = 'Subscribed'
+        }else{
+          document.querySelector('.js-subscribe').innerHTML = 'Subscribe'
+        }
+      }
+
+      function calculateTotal(){
+        //the vaue from DOM will be a string type so convert to number by using Number()
+        let cost = Number(document.querySelector('.js-cost').value);
+
+        if(cost<40){
+          cost = cost + 10;
+          document.querySelector('.js-cost-total').innerHTML = `$${cost}`;
+        }
+          document.querySelector('.js-cost-total').innerHTML = `$${cost}`;
+      }
+
+/*      function handleKeyDown(){
+        if(event.key === 'Enter'){
+        calculateTotal()
+        }
+      }
+
+      ths abive function works as intended but the event does not exist inside the function so we pass the event object as parameter
+*/
+      function handleCostKeyDown(event){
+        if(event.key === 'Enter'){
+        calculateTotal()
+        }
+      }
+    </script>
+  </body>
+</html>

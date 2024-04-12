@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    const product = {
+      name: 'socks',
+      price: 200,
+      ['delivery-time']: '1 day',
+      rating : { //nested object
+        stars : 4.5,
+        count: 87,
+      },
+      fun: function function1(){  //Js considers functiin as a value so it can also be assigned inside object
+        console.log("Function inside nested object")
+      }
+
+     /*shorthand method for abobe is
+fun(){
+ console.log("Function inside nested object") 
+}
+and call as product.fun()
+*/
+
+    };
+    product.name='cotton socks'
+    product.newattribute = true
+    delete product.newattribute
+    console.log(product)
+    console.log(product.price)
+    //below is called bracket notation same as dot notation
+
+    //used when you cant access via dot example
+    //console.log(product.delivery-time); will result in error bcoz Js try to to subtraction assuming it as minus
+    //so here we use console.log(['delivery-time']) - will return undefined as output
+    console.log(product['name'])
+    product.fun()
+
+    /*destructuring object reference refer to notes in ipad*/
+  </script>
+  
+</body>
+</html>
