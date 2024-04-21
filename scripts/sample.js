@@ -127,6 +127,8 @@ console.log(newArr)
 
   console.log(removeDuplicates(arr1));
 
+  //example from MDN https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings
+
   const quote = 'I do not like green eggs and ham. I do not like them, Sam-I-Am.';
   const quoteLength = quote.length;
 const substring = 'green eggs and ham';
