@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Functions</title>
+</head>
+<body>
+  <button class="js-button">Click</button>
+</body>
+<!--
+  instead of giving onclick="" on html button tag we can invoke from js using eventlisteneers
+  addEventListener takes up two arguments in below code = event and function
+  event - predefined values which triggers action ex click , keydown, keyUp, rightclick
+
+  adv-
+  you can add multiple event listeners to same event
+  and remove an event
+  to remove an event you need two arguments, eventname and value or function u want to delete
+  so save a function in a variable and use that
+-->
+<script>
+  const buttonElement = document.querySelector('.js-button')
+  buttonElement.addEventListener('click', ()=>{
+    console.log('hello from event listener')
+  })
+
+  const functionValue2 = ()=>{
+    console.log('hello from event listener 2')
+  }
+
+  buttonElement.addEventListener('click', functionValue2)
+//remove event listener
+
+buttonElement.removeEventListener('click', functionValue2)
+
+//filter method
+const array5 = [1, -1, 3]
+console.log(array5.filter((value1) => {
+  return false; // will return and empty array []
+}));
+
+</script>
+</html>
