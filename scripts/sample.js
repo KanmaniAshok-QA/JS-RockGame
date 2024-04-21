@@ -127,7 +127,7 @@ console.log(newArr)
 
   console.log(removeDuplicates(arr1));
 
-  //example on MDN https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings
+  //example from MDN https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings
 
   const quote = 'I do not like green eggs and ham. I do not like them, Sam-I-Am.';
   const quoteLength = quote.length;
@@ -137,7 +137,7 @@ if(quote.includes('green eggs and ham')){
 const substringStartIndex = quote.indexOf(substring);
 const substringEndIndex = quote.indexOf('.');
 const beforeSubstring = quote.indexOf(quote);
-console.log(beforeSubstring)
+console.log(substringStartIndex);
 console.log(quote.slice(beforeSubstring,substringEndIndex +1));
 
 }
