@@ -137,7 +137,9 @@ if(quote.includes('green eggs and ham')){
 const substringStartIndex = quote.indexOf(substring);
 const substringEndIndex = quote.indexOf('.');
 const beforeSubstring = quote.indexOf(quote);
+
 console.log(substringEndIndex)
+
 console.log(quote.slice(beforeSubstring,substringEndIndex +1));
 
 }
